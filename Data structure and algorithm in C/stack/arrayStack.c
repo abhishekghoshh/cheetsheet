@@ -35,7 +35,7 @@ void push(struct stack *stack_,int data){
 int pop(struct stack *stack_){
     int value = -999999; 
     if(stack_->top==-1){
-        printf("stack Overflow\n");
+        printf("stack Underflow\n");
     }else{
         stack_->top = stack_->top - 1;
         value = stack_->items[stack_->top+1];
@@ -45,7 +45,7 @@ int pop(struct stack *stack_){
 int peek(struct stack *stack_){
     int value = -999999; 
     if(stack_->top==-1){
-        printf("stack Overflow\n");
+        printf("stack Underflow\n");
     }else{
         value = stack_->items[stack_->top];
     }
