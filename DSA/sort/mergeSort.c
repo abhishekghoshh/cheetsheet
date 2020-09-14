@@ -27,6 +27,9 @@ void sortAscend(int *array,int count){
 void sortDescend(int *array,int count){
     
 }
+void merege(int *array,int first,int second,int third){
+    
+}
 int main(){
     int *array;
     int count = 20;
