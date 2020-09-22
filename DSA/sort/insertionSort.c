@@ -22,28 +22,10 @@ void swap(int *first,int *second){
     *second=temp;
 }
 void sortAscend(int *array,int count){
-    int key,j;
-    for(int i=1;i<count;i++){
-        key=array[i];
-        j=i-1;
-        while(j>=0 && array[j]>key){
-           array[j+1]=array[j];
-           j=j-1; 
-        }
-        array[j+1]=key;
-    }
+    
 }
 void sortDescend(int *array,int count){
-    int key,j;
-    for(int i=1;i<count;i++){
-        key=array[i];
-        j=i-1;
-        while(j>=0 && array[j]<key){
-           array[j+1]=array[j];
-           j=j-1; 
-        }
-        array[j+1]=key;
-    }
+    
 }
 int main(){
     int *array;

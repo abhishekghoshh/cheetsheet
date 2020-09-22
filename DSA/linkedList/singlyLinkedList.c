@@ -49,6 +49,28 @@ void insertAtEnd(struct node *start,int data){
         start->next=temp;
     }
 }
+void deleteFromBegin(){
+
+}
+void DeleteFromEnd(){
+    
+}
+int getCount(struct node *start){
+    int count =0;
+    if(NULL!=start){
+        while(NULL!=start){
+            count++;
+            start=start->next;
+        }
+    }
+    return count;
+}
+void insertAtN(struct node **start,int position,int data){
+
+}
+int deleteAtN(struct node **start,int position){
+
+}
 int main(){
     int array[]={1,2,3,4,5};
     struct node *start;

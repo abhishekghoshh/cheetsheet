@@ -8,7 +8,7 @@ struct graph{
 };
 struct graph createGraph(int vertex){
     struct graph graph_;
-    int **graph= (int **)malloc(vertex * sizeof(int *)); ;
+    int **graph= (int**)malloc(vertex * sizeof(int**)); ;
 
     for(int i=0;i<vertex;i++){
         graph[i] = (int*)malloc(sizeof(int*));
