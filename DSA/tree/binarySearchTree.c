@@ -1,6 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include<conio.h>
+// #include<conio.h>
 struct node{
     int data;
     struct node *left;
@@ -110,13 +110,20 @@ int getLevel(struct node *start){
         return 0;
     }
 }
-// void delete(){
+void getParentChildAddress(struct node **child,struct node **parent,struct node *start,int data){
+    
+}
+void deleteFromTree(struct node **start,int data){
+    struct node *child = NULL;
+    struct node *parent = NULL;
+    getParentChildAddress(&child,&parent,*start,data);
+    
 
-// }
+}
 int main(){
     struct node *start=NULL;
     printNodeAddress(start);
-    int arr[]={4,3,1,2,6,5,7,-1,3};
+    int arr[]={4,12,1,2,6,5,7,-1,3};
     for(int i=0;i<(sizeof(arr)/sizeof(int));i++){
         insert(&start,arr[i]);
     }
@@ -144,5 +151,7 @@ int main(){
     printf("Maximum element of tree is %d\n",getMaximum(start));
     printf("Minimum element of tree is %d\n",getMinimum(start));
     printf("Height of the tree is %d\n",getLevel(start));
+    deleteFromTree(start,5);
+    deleteFromTree(start,500);
     return 0;
 }
