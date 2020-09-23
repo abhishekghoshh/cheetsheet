@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+// #include<conio.h>
 #include<stdlib.h>
 
 int* create(int count){
@@ -22,10 +22,28 @@ void swap(int *first,int *second){
     *second=temp;
 }
 void sortAscend(int *array,int count){
-    
+    int j,key;
+    for(int i=0;i<count;i++){
+        key = array[i];
+        j=i-1;
+        while(j>=0 && key < array[j]){
+            array[j+1] = array[j];
+            j--;
+        }
+        array[j+1] = key;
+    }
 }
 void sortDescend(int *array,int count){
-    
+    int j,key;
+    for(int i=0;i<count;i++){
+        key = array[i];
+        j=i-1;
+        while(j>=0 && key > array[j]){
+            array[j+1] = array[j];
+            j--;
+        }
+        array[j+1] = key;
+    }
 }
 int main(){
     int *array;
@@ -33,6 +51,9 @@ int main(){
     array = create(count);
     print(array,count);
     sortAscend(array,count);
+    print(array,count);
+
+    array = create(count);
     print(array,count);
     sortDescend(array,count);
     print(array,count);
