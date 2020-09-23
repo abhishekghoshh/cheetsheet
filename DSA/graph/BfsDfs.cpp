@@ -78,11 +78,13 @@ class Graph{
 };
 int main(){
     Graph graph(6);
+
+    graph.addEdge(1,0);
     graph.addEdge(1,2);
     graph.addEdge(1,3);
-    graph.addEdge(2,4);
+    graph.addEdge(3,4);
     graph.addEdge(4,5);
-    graph.addEdge(5,0);
+    
 
     graph.bfs(1);
     graph.dfs(1);
