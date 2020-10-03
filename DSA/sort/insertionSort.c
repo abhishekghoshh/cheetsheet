@@ -23,14 +23,14 @@ void swap(int *first,int *second){
 }
 void sortAscend(int *array,int count){
     int j,key;
-    for(int i=0;i<count;i++){
-        key = array[i];
+    for(i=1;i<count;i++){
         j=i-1;
-        while(j>=0 && key < array[j]){
-            array[j+1] = array[j];
+        key=array[i];
+        while(j>=0 & key < array[j]){
+            a[j+1]=a[j];
             j--;
         }
-        array[j+1] = key;
+        a[j+1]=key;
     }
 }
 void sortDescend(int *array,int count){
