@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 public class MaximumAreaOfHistogram {
     public static void main(String args[]){
-        Integer[] histogram = {1,3,2,4,3,3};
+        Integer[] histogram = {1,3,2,4,3,5,3};
         int length = histogram.length;
         System.out.println(Arrays.asList(histogram));
         List<Integer> leftVertices = leftSmallestVertices(histogram, length);
