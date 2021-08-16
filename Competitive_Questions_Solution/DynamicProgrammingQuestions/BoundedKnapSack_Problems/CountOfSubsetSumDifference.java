@@ -1,3 +1,5 @@
+package DynamicProgrammingQuestions.BoundedKnapSack_Problems;
+
 public class CountOfSubsetSumDifference {
     private static int[][] memo;
    public static void main(String[] args){

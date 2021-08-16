@@ -1,3 +1,5 @@
+package DynamicProgrammingQuestions.UnBoundedKnapSack_Problems;
+
 public class UnBoundKnapSack {
     private static int[][] memo;
     public static void main(String[] args){

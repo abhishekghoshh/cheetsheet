@@ -1,3 +1,5 @@
+package DynamicProgrammingQuestions.BoundedKnapSack_Problems;
+
 public class EqualSumPartition {
     private static boolean[][] memo;
     public static void main(String args[]){
