@@ -1,5 +1,4 @@
 package StackQuestions;
-
 import  java.util.Collections;
 
 import java.util.ArrayList;
@@ -7,24 +6,24 @@ import java.util.List;
 import java.util.Stack;
 import java.util.Arrays;
 
-public class NearestGreaterToRight{
+public class NearestGreaterToLeft{
     public static void main(String args[]){
         Integer[] arr = {1,3,2,4,3,3};
         int length = arr.length;
-        List<Integer> answer = nearestGreaterToRight(arr, length);
+        List<Integer> answer = nearestGreaterToleft(arr, length);
         System.out.println(Arrays.asList(arr));
         System.out.println(answer);
     }
 
-    private static List<Integer> nearestGreaterToRight(Integer[] arr, int length) {
-        List<Integer> answer = new ArrayList<>();
+    private static List<Integer> nearestGreaterToleft(Integer[] arr, int length) {
         Stack<Integer> stack = new Stack<>();
-        for(int i=length-1;i>=0;i--){
+        List<Integer> answer = new ArrayList<>();
+        for(int i=0;i<length;i++){
             if(stack.size()==0){
                 answer.add(-1);
             }else{
                 if(stack.peek()>arr[i]){
-                   answer.add(stack.peek()); 
+                    answer.add(stack.peek());
                 }else{
                     while(stack.size()>0 && stack.peek()<=arr[i]){
                         stack.pop();
@@ -38,7 +37,6 @@ public class NearestGreaterToRight{
             }
             stack.add(arr[i]);
         }
-        Collections.reverse(answer);
         return answer;
     }
 }
