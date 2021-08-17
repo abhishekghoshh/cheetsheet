@@ -8,6 +8,11 @@ public class MaximumAreaOfHistogram {
     public static void main(String args[]){
         Integer[] histogram = {1,3,2,4,3,5,3};
         int length = histogram.length;
+        int maxAreaOfHistogram = maxAreaOfHistogram(histogram, length);
+        System.out.println(maxAreaOfHistogram);
+    }
+
+    public static int maxAreaOfHistogram(Integer[] histogram, int length) {
         System.out.println(Arrays.asList(histogram));
         List<Integer> leftVertices = leftSmallestVertices(histogram, length);
         System.out.println(leftVertices);
@@ -15,7 +20,8 @@ public class MaximumAreaOfHistogram {
         System.out.println(rightVertices);
         List<Integer> areas = areaCalculation(histogram,leftVertices, rightVertices,length);
         System.out.println(areas);
-        System.out.println(max(areas,length));
+        int maxAreaOfHistogram = max(areas,length);
+        return maxAreaOfHistogram;
     }
 
     private static List<Integer> areaCalculation(Integer[] histogram, List<Integer> leftVertices,
