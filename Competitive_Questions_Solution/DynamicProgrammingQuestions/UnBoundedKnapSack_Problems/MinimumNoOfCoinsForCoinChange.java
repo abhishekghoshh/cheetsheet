@@ -3,7 +3,7 @@ package DynamicProgrammingQuestions.UnBoundedKnapSack_Problems;
 public class MinimumNoOfCoinsForCoinChange {
     private static int[][] memo=null;
     public static void main(String[] args){
-        int wt[] = {1,2,3,4,5,9,12};
+        int wt[] = {1,2,3,4,5,9,11};
         int n= wt.length;
         int w=12; 
         memo=initialize(n,w,wt);
@@ -35,7 +35,7 @@ public class MinimumNoOfCoinsForCoinChange {
             if(i % wt[0]==0){
                 memo[1][i]=i/wt[0];
             }else{
-                memo[1][i]=Integer.MAX_VALUE;
+                memo[1][i]=Integer.MAX_VALUE-1;
             }
         }
         return memo;
