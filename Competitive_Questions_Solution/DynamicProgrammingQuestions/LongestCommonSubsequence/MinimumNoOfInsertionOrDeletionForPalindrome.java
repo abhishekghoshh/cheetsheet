@@ -1,6 +1,6 @@
 package DynamicProgrammingQuestions.LongestCommonSubsequence;
 
-public class MinimumNoOfDeletionForPalindrome {
+public class MinimumNoOfInsertionOrDeletionForPalindrome {
     
     public static void main(String [] args){
         String str= "abcbcxcbe";
