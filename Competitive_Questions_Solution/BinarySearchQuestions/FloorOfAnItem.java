@@ -18,9 +18,9 @@ public class FloorOfAnItem {
                 return mid;
             } else if (arr[mid] < key) {
                 index = mid;
-                //extra check for safety
-                if(arr[mid+1]<key){
-                    index=mid+1;
+                // extra check for safety
+                if (arr[mid + 1] < key) {
+                    index = mid + 1;
                 }
                 low = mid + 1;
             } else {
